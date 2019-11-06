@@ -11,7 +11,7 @@ package RegisterForm;
  */
 public class connection {
       protected String dbname = "marmarss";
-    protected String url = "jdbc:mysql://localhost/"+dbname;
+    public String url = "jdbc:mysql://localhost/"+dbname;
     protected String Username = "root";
     protected String Password = ""; 
     
