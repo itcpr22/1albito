@@ -434,8 +434,8 @@ public class mainpage extends javax.swing.JFrame {
         addprod.setAlwaysOnTop(true);
 
         add_btn.setVisible(true);
-        save_btn.setVisible(false);
-        addqty_btn.setVisible(false);
+ //       save_btn.setVisible(false);
+ //       addqty_btn.setVisible(false);
 
         this.enableAddProductFields();
 
