@@ -134,6 +134,7 @@ public class mainpage extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         lblquan = new javax.swing.JLabel();
         save_btn = new javax.swing.JButton();
+        addqty_btn1 = new javax.swing.JButton();
         welcome = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -144,6 +145,7 @@ public class mainpage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        addqty_btn = new javax.swing.JButton();
 
         addprod.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         addprod.setMinimumSize(new java.awt.Dimension(474, 330));
@@ -223,14 +225,25 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
 
+        addqty_btn1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        addqty_btn1.setForeground(new java.awt.Color(102, 102, 255));
+        addqty_btn1.setText("Add Quantity");
+        addqty_btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addqty_btn1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(173, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(addqty_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(add_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -265,11 +278,13 @@ public class mainpage extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(ppr))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(save_btn, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(add_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(68, 68, 68))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(add_btn)
+                        .addComponent(addqty_btn1))
+                    .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(43, 43, 43)
@@ -435,6 +450,16 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
 
+        addqty_btn.setBackground(new java.awt.Color(255, 255, 255));
+        addqty_btn.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        addqty_btn.setForeground(new java.awt.Color(255, 0, 0));
+        addqty_btn.setText("Add Quantity");
+        addqty_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addqty_btnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -446,8 +471,9 @@ public class mainpage extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(addqty_btn, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(welcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -467,7 +493,9 @@ public class mainpage extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)))
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(addqty_btn)))
                 .addGap(0, 9, Short.MAX_VALUE))
         );
 
@@ -482,7 +510,7 @@ public class mainpage extends javax.swing.JFrame {
 
         add_btn.setVisible(true);
         save_btn.setVisible(false);
- //       addqty_btn.setVisible(false);
+        addqty_btn.setVisible(false);
 
         this.enableAddProductFields();
 
@@ -597,6 +625,50 @@ addprod.setVisible(false);
         }
     }//GEN-LAST:event_save_btnActionPerformed
 
+    private void addqty_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addqty_btnActionPerformed
+        // TODO add your handling code here:
+        int row = ptable.getSelectedRow();
+        if(row != -1){
+            addprod.setVisible(true);
+            addprod.setLocationRelativeTo(this);
+            addprod.setAlwaysOnTop(true);
+            save_btn.setVisible(false);
+            add_btn.setVisible(false);
+            addqty_btn.setVisible(true);
+
+            id = ptable.getValueAt(row, 0);
+            Object pn = ptable.getValueAt(row, 1);
+            Object qty = ptable.getValueAt(row, 2);
+            Object pr = ptable.getValueAt(row, 3);
+
+            pntf.setEnabled(false);
+            ppr.setEnabled(false);
+            pqty.setEnabled(true);
+
+            pntf.setText(pn.toString());
+            lblquan.setText(qty.toString());
+            ppr.setValue(Double.valueOf(pr.toString()));
+            pqty.setValue(0);
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Select a product", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_addqty_btnActionPerformed
+
+    private void addqty_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addqty_btn1ActionPerformed
+        // TODO add your handling code here:
+        String pn = pntf.getText();
+        Object qty = pqty.getValue();
+        int c = JOptionPane.showConfirmDialog(addprod, "Would you like to add\n "+qty+"\n to "+pn+" product?", "Add Quantity", JOptionPane.YES_NO_OPTION);
+        if(c == JOptionPane.YES_OPTION){
+            int be = product_pobj.AddQuantity(id, qty);
+            if(be==1){
+                JOptionPane.showMessageDialog(addprod, "Quantity Updated");
+                addprod.setVisible(false);
+                this.refresh();
+            }
+        }
+    }//GEN-LAST:event_addqty_btn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -635,6 +707,8 @@ addprod.setVisible(false);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_btn;
     private javax.swing.JDialog addprod;
+    private javax.swing.JButton addqty_btn;
+    private javax.swing.JButton addqty_btn1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
